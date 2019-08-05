@@ -1,0 +1,27 @@
+img {
+    width: 90px;
+    
+    height: 90px;
+    
+    float: left;
+        }
+    body {
+background-color: pink;
+    }
+    #idCard {
+        border-radius: 35px;
+        border: 5px solid black;
+        height: 25em;
+        width: 45em;
+        margin: 45px auto;
+    background-color: lightgreen;
+    box-shadow: 2px 5px red;
+        }
+        #postFullName{
+            font-size: 30px;
+            text-align: center;
+        }
+
+    form{
+        text-align: center;
+    }

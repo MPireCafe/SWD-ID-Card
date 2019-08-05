@@ -1,0 +1,111 @@
+html
+<!DOCTYPE html>
+<html>    
+            <head>
+                
+        <title>JavaScript Part 3 Lesson 8</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style></style>
+            </head> 
+    <body>
+            
+    <form class="base">
+            <h1>Let's Create an ID card!</h1>
+            <p>First Name</p>
+            <br>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+            <br>
+            <p>Last Name</p>
+            <br>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+            <br>
+            <p>Age</p>
+            <br>
+            <input type="text" name="Age" id="Age" placeholder="Numbers Only">
+            <br>
+            <p>Phone Number</p>
+            <br>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+            <br>
+            <p>Address</p>
+            <br>
+            <input type="text" name="Address" id="Address" placeholder="Address">
+            <br>
+            <button type="button" onclick= "idCard()">Get ID Card</button>
+   
+                
+        
+        <var></var>
+            
+    </form>
+    <div id="idCard">
+
+            <img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
+            <br>
+            <br>
+<div>Full Name;<p id="postFullName"></p></div>
+<div>Age<p id="postAge"></p></div>
+<div>Phone Number<p id="postPhoneNumber"></p></div>
+<div>Address<p id="postAddress"></p></div>
+
+</div>
+
+<button type="button" onclick= "idCard()">Submit</button>
+<script src="script.js"></script>
+</body>
+
+</html>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+css
+
+img {
+    width: 90px;
+    
+    height: 90px;
+    
+    float: left;
+        }
+    body {
+background-color: pink;
+    }
+    #idCard {
+        border-radius: 35px;
+        border: 5px solid black;
+        height: 25em;
+        width: 45em;
+        margin: 45px auto;
+    background-color: lightgreen;
+    box-shadow: 2px 5px red;
+        }
+        #postFullName{
+            font-size: 30px;
+            text-align: center;
+        }
+
+    form{
+        text-align: center;
+    }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+javascript
+
+function idCard() {
+var firstName = document.getElementById("firstName").value;
+var lastName = document.getElementById("lastName").value;
+var Age = document.getElementById("Age").value;
+var phoneNumber = document.getElementById("phoneNumber").value;
+var address = document.getElementById("Address").value;
+var fullName = firstName + " " + lastName;
+
+document.getElementById("postFullName").innerHTML=fullName;
+document.getElementById("postAge").innerHTML=Age;
+document.getElementById("postPhoneNumber").innerHTML=phoneNumber;
+document.getElementById("postAddress").innerHTML=address;
+console.log("First Name:" + firstName);
+console.log("Last Name:" + lastName);
+console.log("Age:" + Age);
+console.log("Phone Number:" + phoneNumber);
+console.log("Addess:" + address);
+ }
+
+
